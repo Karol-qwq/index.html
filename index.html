@@ -9,18 +9,28 @@
 <body>
     <div class="container">
         <h1>Cifrado César</h1>
-        
-        <textarea id="inputText" placeholder="Ingresa tu mensaje..."></textarea>
-        
-        <input type="number" id="shift" placeholder="Desplazamiento" min="1" max="25">
-        
-        <div class="buttons">
-            <button onclick="cipher()">Cifrar</button>
-            <button onclick="decipher()">Descifrar</button>
+
+        <div class="input-group">
+            <label for="texto">Texto:</label>
+            <textarea id="texto" placeholder="Introduce el texto aquí..."></textarea>
         </div>
-        
-        <h2>Resultado:</h2>
-        <div id="result" class="result"></div>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="desplazamiento">Desplazamiento:</label>
+                <input type="number" id="desplazamiento" value="3" min="1" max="25">
+            </div>
+
+            <div class="buttons">
+                <button id="cifrarBtn">Cifrar</button>
+                <button id="descifrarBtn">Descifrar</button>
+            </div>
+        </div>
+
+        <div class="resultado-container">
+            <h2>Resultado:</h2>
+            <p id="resultado"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>
